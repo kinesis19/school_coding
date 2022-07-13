@@ -11,7 +11,7 @@ int main(){
 		printf("# 메모리가 부족합니다. \n");
 		exit(1);
 	}
-	
+	printf("다섯 명의 나이를 입력하세요 : "); 
 	for(i = 0; i < 5; i++){
 		scanf("%d", &pi[i]);
 		sum += pi[i];
