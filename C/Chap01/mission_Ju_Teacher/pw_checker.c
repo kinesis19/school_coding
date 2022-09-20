@@ -3,13 +3,22 @@
 #include <string.h>
 
 int main(){
-	
-	char input_pw[20] = "";
-	char correct_pw[20] = "password123!";
+	int checker = 0; // true ,false ÆÇ´Ü
+	char input_pw[20];
+//	char correct_pw[20] = "password123!";
 	
 	printf("Enter pw :");
 	gets(input_pw);
-	if(strcmp(input_pw, correct_pw) == 0){
+		
+	if(strcmp(input_pw, "password123!"/*correct_pw*/) == 0)
+	{
+//		puts("PASS!");
+		checker = 1;
+	}else{
+//		puts("Discrepancy");
+	}
+	
+	if(checker){
 		puts("PASS!");
 	}else{
 		puts("Discrepancy");
