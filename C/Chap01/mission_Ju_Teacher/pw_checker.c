@@ -1,22 +1,20 @@
-/* ÁÖ½Ü - ¹Ì¼Ç Day3 : pwÀÔ·Â ¹Ş¾Æ ¿øÇÏ´Â pw°¡ ¸Â´ÂÁö Ã¼Å·ÇÏ´Â  PR*/
+/* ì£¼ìŒ¤ - ë¯¸ì…˜ Day3 : pwì…ë ¥ ë°›ì•„ ì›í•˜ëŠ” pwê°€ ë§ëŠ”ì§€ ì²´í‚¹í•˜ëŠ”  PR*/
 #include <stdio.h>
-
-
+#include <string.h>
 
 int main(){
 	
-	char[20] input_pw = "";
-	char[20] checker_pw = "HelloWorld";
+	char input_pw[20] = "";
+	char correct_pw[20] = "password123!";
 	
-	printf("PW¸¦ ÀÔ·ÂÇÏ½Ã¿À. : ");
-	gets("%s", &input_pw);
-	
-	if(input_pw == checker_pw){
-		printf("Åë°ú!");
+	printf("pwë¥¼ ì…ë ¥í•˜ì‹œì˜¤ : ");
+	gets(input_pw);
+	if(strcmp(input_pw, correct_pw) == 0){
+		puts("pwê°€ ì¼ì¹˜í•©ë‹ˆë‹¤.");
 	}else{
-		printf("½ÇÆĞ!");
+		puts("pwê°€ ë¶ˆì¼ì¹˜í•©ë‹ˆë‹¤..");
 	}
-	getch();// ÇĞ±³¿¡¼­ cmd°¡ ´İÈ÷µµ·Ï ¼³Á¤ µÇ¾î¼­, cmd Ã¢ ´İÈûÀ» ¹æÁöÇÏ±â À§ÇØ ÀÛ¼ºÇÔ. (½ÇÁ¦ PR°ú´Â ¹«°üÇÔÀ» ¹àÈû.) 
+	
 	
 	return 0;
 }
