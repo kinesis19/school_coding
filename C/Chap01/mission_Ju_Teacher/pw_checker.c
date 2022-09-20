@@ -15,6 +15,8 @@ int main(){
 		puts("Discrepancy");
 	}
 	
+	getch();
+	
 	
 	return 0;
 }
