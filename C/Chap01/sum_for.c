@@ -1,4 +1,4 @@
-/* 1, 2, ~~~, n의 합을 구하는 PR - (while문)*/
+/* 1, 2, ~~~, n의 합을 구하는 PR - (for문)*/
 #include <stdio.h>
 
 int main(){
@@ -10,9 +10,8 @@ int main(){
 	printf("n의 값 : ");
 	scanf("%d", &n);
 	i = 1;
-	while(i <= n){
+	for(i = 1; i <= n; i++){
 		sum += i;
-		i++;
 	}
 	
 	printf("1부터 %d까지의 합은 %d입니다.\n", n, sum);
