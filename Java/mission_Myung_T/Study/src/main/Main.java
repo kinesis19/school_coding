@@ -2,7 +2,7 @@ package main;
 
 //import pq_122.Pq_122;
 //import pq_123.Pq_123;
-import pq_125.ForMoonNumPrinter;
+//import pq_125.ForMoonNumPrinter;
 import pq_130.Lotto;
 
 public class Main {
