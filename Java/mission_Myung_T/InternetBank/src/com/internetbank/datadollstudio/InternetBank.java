@@ -12,7 +12,7 @@ public class InternetBank {
 		long userMoney = 0; // 사용자의 잔고 
 		
 		while(run) {
-			System.out.print("\n");
+			System.out.print("\n\n");
 			System.out.println("--------------------------------------");
 			System.out.println("1. 예금 | 2. 출금 | 3. 잔고 | 4. 종료.");
 			System.out.println("--------------------------------------");
