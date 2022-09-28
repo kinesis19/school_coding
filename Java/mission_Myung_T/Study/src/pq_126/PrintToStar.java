@@ -14,7 +14,7 @@ public class PrintToStar {
 				if(j == space) {
 					System.out.print("*");
 					space--;
-				}
+				} 
 			}
 			System.out.print("\n");
 			
