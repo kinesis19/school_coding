@@ -33,7 +33,7 @@ public class RockPaperScissors {
 					System.out.println("결과 : 패\n");
 				}
 			}else {
-				System.out.println("제대로 된 숫자를 입력하세요 (1:가위, 2:바위, 보:3)\n");
+				System.out.println("제대로 된 숫자를 입력하세요 (1:가위, 2:바위, 보:3)\n"); /* User Error에 대응하기 위한 예외 처리. */
 			}
 			
 		}while(userAnswer != 0);
