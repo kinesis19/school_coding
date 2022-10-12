@@ -1,6 +1,8 @@
 package main;
 
-import pq_126.PrintToStar;
+import pq_129.RockPaperScissors;
+//import pq_126.PrintToStar;
+//import pq_131.PcVsPerson;
 
 //import pq_126.PrintToStar;
 
@@ -15,7 +17,9 @@ public class Main {
 //		Pq_123 pq_123 = new Pq_123();
 //		ForMoonNumPrinter pq_125 = new ForMoonNumPrinter();
 //		Lotto pq_130 = new Lotto();
-		PrintToStar pq_126 = new PrintToStar();
-		pq_126.run();
+//		PrintToStar pq_126 = new PrintToStar();
+//		PcVsPerson pq_131 = new PcVsPerson();
+		RockPaperScissors pq_129 = new RockPaperScissors();
+		pq_129.run();
 	}
 }

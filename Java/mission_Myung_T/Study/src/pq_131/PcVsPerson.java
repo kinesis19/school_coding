@@ -6,8 +6,7 @@ import java.util.Random;
 
 public class PcVsPerson {
 
-	public static void main(String[] args) {
-		
+	public void run() {
 		Random rand = new Random();
 		Scanner sr = new Scanner(System.in);
 		
