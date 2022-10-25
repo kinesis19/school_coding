@@ -1,46 +1,58 @@
-/* ¼±Çü °Ë»ö ÇÁ·Î±×·¥Ver.1*/
+/* ì„ í˜• ê²€ìƒ‰ í”„ë¡œê·¸ë¨Ver.1*/
 #include <stdio.h>
 
-int LinearSearching(int idx_cnt, int find_num, int *x); /* ¹Ø¿¡¼­ »ç¿ëÇÒ ÇÔ¼ö¸¦ ¹Ì¸® ¼±¾ğ ÇÔ.*/
+int LinearSearching(int idx_cnt, int find_num, int *x); /* ë°‘ì—ì„œ ì‚¬ìš©í•  í•¨ìˆ˜ë¥¼ ë¯¸ë¦¬ ì„ ì–¸ í•¨.*/
 
 int main(){
-	int idx_cnt = 0, i, idx_num = 0, find_num = 0; /* idx_cnt : ¿ä¼Ò °³¼ö, idx_num = ÇØ´ç ¿ä¼Ò¿¡ ³ÖÀ» °ª*/
+	int idx_cnt = 0, i, idx_num = 0, find_num = 0; /* idx_cnt : ìš”ì†Œ ê°œìˆ˜, idx_num = í•´ë‹¹ ìš”ì†Œì— ë„£ì„ ê°’*/
 	
-	printf("[¼±Çü °Ë»öPR]\n");
-	printf("¿ä¼Ò °³¼ö : ");
-	scanf("%d", &idx_cnt); /*¿ä¼Ò °³¼ö¸¦ »ç¿ëÀÚ·ÎºÎÅÍ ÀÔ·Â ¹ŞÀ½.*/
-	int x[idx_cnt]; /*»ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ ¿ä¼Ò¿¡ ¾Ë¸ÂÀº »çÀÌÁîÀÇ int Çü ¹è¿­ x¸¦ ¼±¾ğÇÔ.*/
-	for(i=0;i<idx_cnt;i++){ /*for¹®À» ÅëÇØ »ç¿ëÀÚ·ÎºÎÅÍ index°ªÀ» ÀÔ·Â ¹ŞÀ½(0ºÎÅÍ idx_cnt-1±îÁö*/
+	printf("[ì„ í˜• ê²€ìƒ‰PR]\n");
+	printf("ìš”ì†Œ ê°œìˆ˜ : ");
+	scanf("%d", &idx_cnt); /*ìš”ì†Œ ê°œìˆ˜ë¥¼ ì‚¬ìš©ìë¡œë¶€í„° ì…ë ¥ ë°›ìŒ.*/
+	
+	int x[idx_cnt]; /*ì‚¬ìš©ìê°€ ì…ë ¥í•œ ìš”ì†Œì— ì•Œë§ì€ ì‚¬ì´ì¦ˆì˜ int í˜• ë°°ì—´ xë¥¼ ì„ ì–¸í•¨.*/
+	
+	for(i=0;i<idx_cnt;i++){ /*forë¬¸ì„ í†µí•´ ì‚¬ìš©ìë¡œë¶€í„° indexê°’ì„ ì…ë ¥ ë°›ìŒ(0ë¶€í„° idx_cnt-1ê¹Œì§€*/
 		printf("x[%d] : ", i);
 		scanf("%d", &idx_num);
 		x[i] = idx_num;
 	}
-	printf("°Ë»ö °ª : ");
-	scanf("%d", &find_num); /*»ç¿ëÀÚ·ÎºÎÅÍ Ã£À» °ªÀ» ÀÔ·Â¹ŞÀ½*/
+	printf("ê²€ìƒ‰ ê°’ : ");
+	scanf("%d", &find_num); /*ì‚¬ìš©ìë¡œë¶€í„° ì°¾ì„ ê°’ì„ ì…ë ¥ë°›ìŒ*/
 	
-	int result = LinearSearching(idx_cnt, find_num, x); /*¸®´Ï¾î ¼­Äª ÇÔ¼ö¸¦ ÅëÇØ ³ª¿Â ¸®ÅÏ °ªÀ» resultº¯¼ö¿¡ ³ÖÀ½.*/
+	int result = LinearSearching(idx_cnt, find_num, x); /*ë¦¬ë‹ˆì–´ ì„œì¹­ í•¨ìˆ˜ë¥¼ í†µí•´ ë‚˜ì˜¨ ë¦¬í„´ ê°’ì„ resultë³€ìˆ˜ì— ë„£ìŒ.*/
 	
-	if(result != -1){ /*result º¯¼öÀÇ °ªÀ» »ç¿ëÇØ °Ë»ö °á°ú¸¦ Ãâ·Â È¤Àº °Ë»ö °á°ú°¡ ¾øÀ½À» Ãâ·Â ÇÔ.*/
-		printf("%dÀº(´Â)x[%d]¿¡ ÀÖ½À´Ï´Ù.", find_num, result);
+	if(result != -1){ /*result ë³€ìˆ˜ì˜ ê°’ì„ ì‚¬ìš©í•´ ê²€ìƒ‰ ê²°ê³¼ë¥¼ ì¶œë ¥ í˜¹ì€ ê²€ìƒ‰ ê²°ê³¼ê°€ ì—†ìŒì„ ì¶œë ¥ í•¨.*/
+		printf("%dì€(ëŠ”)x[%d]ì— ìˆìŠµë‹ˆë‹¤.", find_num, result);
 	}else if(result == -1){
-		printf("°Ë»ö °á°ú°¡ ¾ø½À´Ï´Ù.");
+		printf("ê²€ìƒ‰ ê²°ê³¼ê°€ ì—†ìŠµë‹ˆë‹¤.");
 	}
+//	free(x);
+	getch();
 	return 0;
 }
 
 int LinearSearching(int idx_cnt, int find_num, int *x){
-	int i;
-	for(i=0;i<find_num;i++){
-//		printf("n¹øÂ° ½Ãµµ °ª : %d\n", *&x[i]); /*µğ¹ö±ë ¿ë*/
-		if(*&x[i]==find_num){
-			return i;
-		}else if(i==idx_cnt){
-			return -1;
-		}
-	}
+	int i = 0;
+	*&x[idx_cnt] = find_num;
+	
+	/*ë³´ì´ˆë²• êµ¬ìƒì•ˆ*/
+	
+	
+	while(1){
+		if(*&x[i] == find_num) break;
+		i++;
+	} 
+	
+	return i == idx_cnt ? -1 : i;
+	
+	/*ë‚´ ì•Œê³ ë¦¬ì¦˜*/
+//	for(i=0;i<find_num;i++){
+////		printf("në²ˆì§¸ ì‹œë„ ê°’ : %d\n", *&x[i]); /*ë””ë²„ê¹… ìš©*/
+//		if(*&x[i]==find_num){
+//			return i;
+//		}else if(i==idx_cnt){
+//			return -1;
+//		}
+//	}
 }
-
-
-
-
-
