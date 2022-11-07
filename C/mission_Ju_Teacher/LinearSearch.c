@@ -38,11 +38,22 @@ int LinearSearching(int idx_cnt, int find_num, int *x){
 	
 	/*보초법 구상안*/
 	
-	
+/*	
 	while(1){
 		if(*&x[i] == find_num) break;
 		i++;
 	} 
+*/	
+
+/*	
+	while(*&x[i] != find_num){ //보초법 2 
+		i++;
+	}
+*/
+
+/*
+	for(i=0;*&x[i]!=find_num;i++); // 보초법 3
+*/	
 	
 	return i == idx_cnt ? -1 : i;
 	
